@@ -13,7 +13,10 @@ download_uris = [
 ]
 
 def main():
-    #zipped_csvs = []
+
+    '''
+        1- Making a "downloads" folder if it doesn't exist, and cd into it. 
+    '''
     path = 'downloads'
     list_directories = os.listdir(path=os.getcwd())
     print(list_directories)
@@ -21,6 +24,14 @@ def main():
         os.mkdir(path)
     os.chdir(path)
     print('helloWorld')
+
+    '------------------------------------------------------------------------------------'
+
+    '''
+        2- Downloading from the urls list, creating a string from the url by splitting and taking second part.
+           Then unzipping the files, removing the zips after finishing.
+           Also checking if the file is a valid zip.
+    '''
     for uri in download_uris:
         zip_name = uri.split('https://divvy-tripdata.s3.amazonaws.com/')[1]
         r = requests.get(uri)
@@ -35,5 +46,6 @@ def main():
         os.remove(zip_name)     
 
         print('done')
+        
 if __name__ == "__main__":
     main()
