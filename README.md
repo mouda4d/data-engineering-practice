@@ -91,6 +91,7 @@ The [ninth exercise](https://github.com/danielbeach/data-engineering-practice/tr
 Polars is a new Rust based tool with a wonderful Python package that has taken Data Engineering by
 storm. It's better than Pandas because it has both SQL Context and supports Lazy evalutation 
 for larger than memory data sets! Show your Lazy skills!
+HELLO WORLD!
 
 
 ### Advanced Exercises
