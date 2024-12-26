@@ -1,4 +1,6 @@
-version: "3.9"
+
+name: DownloadHTML
+
 services:
   test:
     image: "exercise-1"
